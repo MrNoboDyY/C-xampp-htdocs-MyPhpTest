@@ -1,0 +1,13 @@
+{
+    "name": "vendor/php-project1",
+    "description": "Description of project PhpProject1.",
+    "authors": [
+        {
+            "name": "lapin",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "twig/twig": "dev-master"
+    }
+}
