@@ -130,11 +130,7 @@ and open the template in the editor.
        }
        
        //les fonctions dans la page
-       //affichage des notes ,colorées en fonction de leur valeur /20
-       
-       
-       
-       
+       //affichage des notes ,colorées en fonction de leur valeur /20                     
        //colore en rouge les notes inf à 10
        //colore en vert les notes sup à 15
        function colore($nombre){
@@ -158,6 +154,9 @@ and open the template in the editor.
                    echo '<br/>';
        }
        
+       ///////////////////////////////////////////////////////////////////////
+       ///////////////////////////////////////////////////////////////////////
+       
        //function vérif parité
 //       function parite($nombre){
 //           //condition si le reste de la div = 0
@@ -170,8 +169,9 @@ and open the template in the editor.
 //       }
              
         ?>
-        <form  action="fonction.php" method="POST">
-            Entrez votre nombre<input type="text" name="num"  />
+        <form  action="fonctions.php" method="POST">
+            Entrez votre nombre <br/>
+            <input type="text" name="num"  />
             <input type="submit" value="ok" name="envoyer" />           
         </form>
         
@@ -184,10 +184,14 @@ and open the template in the editor.
             $nombre=$_POST['num'];
             
             //affectation de la verif dans une variable
-            $recu= parite($nombre);
+            $recup=parite($nombre);
             
             //afficher le verdict
-            echo 'ce nombre est '.$recu.'.';
+            echo 'ce nombre est '.$recup.'.';
+        }
+        
+        for($i=0;$i<=50;$i++){
+            echo 'je ne tricherai plus.' , $i .'<br/>';
         }
         ?>
         
