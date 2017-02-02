@@ -149,15 +149,48 @@ and open the template in the editor.
        //construction d'un tableau de notes
        $notes= array(2,5,7,10,11,13,15,19);
        
-       
+      
+       //la function était avec $nombre
        echo 'Vos notes du trimestre sont :<br/>';
        foreach ($notes as $note){
            echo '- ';
-                   colore($note);
+                   colore($note);//color($note) mache aussi bien
                    echo '<br/>';
        }
        
+       //function vérif parité
+//       function parite($nombre){
+//           //condition si le reste de la div = 0
+//           if ($nombre%2==0){
+//               $verdict='pair';
+//           } else {
+//           $verdict='impair';
+//           }
+//           return $verdict;
+//       }
+             
         ?>
+        <form  action="fonction.php" method="POST">
+            Entrez votre nombre<input type="text" name="num"  />
+            <input type="submit" value="ok" name="envoyer" />           
+        </form>
+        
+        <?php 
+        
+        //si l'utilisateur clic sur envoyer
+        if (isset($_POST['envoyer'])){
+            
+            //recup la valeur entrée
+            $nombre=$_POST['num'];
+            
+            //affectation de la verif dans une variable
+            $recu= parite($nombre);
+            
+            //afficher le verdict
+            echo 'ce nombre est '.$recu.'.';
+        }
+        ?>
+        
 
     </body>
 </html>
