@@ -8,6 +8,6 @@
         }
     ],
     "require": {
-        "twig/twig": "dev-master"
+        "twig/twig": "* dev-master"
     }
 }

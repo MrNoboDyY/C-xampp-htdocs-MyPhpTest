@@ -166,17 +166,17 @@ and open the template in the editor.
 //           $verdict='impair';
 //           }
 //           return $verdict;
-//       }
+       //}
              
         ?>
-        <form  action="fonctions.php" method="POST">
+        <form  action="saisie.php" method="POST">
             Entrez votre nombre <br/>
             <input type="text" name="num"  />
             <input type="submit" value="ok" name="envoyer" />           
         </form>
         
         <?php 
-        
+        include 'fonctions.php';
         //si l'utilisateur clic sur envoyer
         if (isset($_POST['envoyer'])){
             
@@ -184,15 +184,17 @@ and open the template in the editor.
             $nombre=$_POST['num'];
             
             //affectation de la verif dans une variable
-            $recup=parite($nombre);
+            $recup= Functions::parite($nombre);
             
             //afficher le verdict
-            echo 'ce nombre est '.$recup.'.';
+            
+            echo "vous avez fourni" .$nombre. "comme nombre <br/>";
+            echo 'ce nombre est '.$recup.'.<br/>';
         }
         
-        for($i=0;$i<=50;$i++){
-            echo 'je ne tricherai plus.' , $i .'<br/>';
-        }
+//        for($i=0;$i<=50;$i++){
+//            echo 'je ne tricherai plus.' , $i .'<br/>';
+//        }
         ?>
         
 
