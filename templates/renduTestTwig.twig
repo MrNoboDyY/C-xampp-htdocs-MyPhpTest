@@ -10,8 +10,8 @@
     <tbody>
         {% for fruit in fruits %}
     <tr>
-        <td>{{fruit.name}}</td>
-        <td>{{fruit.couleur}}</td>
+        <td><font color="{{fruit.couleur}}">{{fruit.name}}</font></td>
+        <td><font color="{{fruit.couleur}}">{{fruit.couleur}}</font></td>
     </tr>
         {%endfor%}
     </tbody>
