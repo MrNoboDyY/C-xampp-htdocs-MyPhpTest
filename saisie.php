@@ -31,7 +31,9 @@ and open the template in the editor.
         -->
 
         <?php
-        
+        ///////////////////////
+        //---->> Twig <<----//
+        ///////////////////////
         require_once 'vendor/autoload.php';
 
         $loader = new Twig_Loader_Filesystem('templates');
@@ -50,8 +52,12 @@ and open the template in the editor.
             'moyenne'=> 11.5,
             'nom'=>'jean',
             'age'=>19,
-            'taille'=>2.10));
+            'taille'=>2.10,
+            'moteur_name'=>'Twig'));
         
+  /////////////////////////////////////////////////////////      
+////////-->> Fin de Twig <<--////////////////////////////////////   
+//////////////////////////////////////////////////////////////////              
         
 //       dans le php on note "if(isset.....){}"       
         echo 'vos données entrées : '.'<br/>';
@@ -221,6 +227,11 @@ and open the template in the editor.
 //        for($i=0;$i<=50;$i++){
 //            echo 'je ne tricherai plus.' , $i .'<br/>';
 //        }
+        
+        
+        
+        
+        
         ?>
         
 

@@ -13,18 +13,23 @@ and open the template in the editor.
         <?php
         require_once 'vendor/autoload.php';
 
+        //Dossier contenant les Templates
         $loader = new Twig_Loader_Filesystem('templates');
         $twig = new Twig_Environment($loader, array(
             'cache' => false,
         ));
+        
+        //charger le template
         $template = $twig->load('premiereTwig.twig');
         
+        //affectation de données aux diff variables
         echo $template->render(array('salaire' => '2000',
             'branche'=> 'informatique',
             'moyenne'=> 11.5,
             'nom'=>'jean',
             'age'=>19,
-            'taille'=>2.10));
+            'taille'=>2.10,
+            'moteur_name'=>'Twig'));
 
 
         $salaire = 2000;
@@ -33,6 +38,7 @@ and open the template in the editor.
         $nom = 'jean';
         $age = 19;
         $taille = 2.10;
+        $moteur_name = 'Twig';
         echo '<strong>Bonjour.</br></strong>
         Le salaire auquel j\'aspire pour bien vivre ' . $salaire . '€.<br/>
                 La branche dans laquelle je travaille ou souhaite travailler : l\' ' . $branche . '</br>
@@ -41,7 +47,7 @@ and open the template in the editor.
             Mon 2ieme nom est ' . $nom . '<br/>
                 j\'ai ' . $age . '<br/>
                     je mesure ' . $taille . 'm.<br/>
-                        et comme mon nom l\'indique,je suis :'
+                        et comme mon nom l\'indique,je suis petit'
         ?>
         <br>
 
