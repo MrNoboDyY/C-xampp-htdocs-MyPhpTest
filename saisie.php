@@ -31,6 +31,28 @@ and open the template in the editor.
         -->
 
         <?php
+        
+        require_once 'vendor/autoload.php';
+
+        $loader = new Twig_Loader_Filesystem('templates');
+        $twig = new Twig_Environment($loader, array(
+            'cache' => false,
+        ));
+        
+        //appel du fichier premiereTwig dans templates
+        //possibilité d'en creer plusieurs...
+        $template = $twig->load('premiereTwig.twig');
+        
+        //affichage du fichier premiereTwig
+        //voir config dans premiereTwig
+        echo $template->render(array('salaire' => '2000',
+            'branche'=> 'informatique',
+            'moyenne'=> 11.5,
+            'nom'=>'jean',
+            'age'=>19,
+            'taille'=>2.10));
+        
+        
 //       dans le php on note "if(isset.....){}"       
         echo 'vos données entrées : '.'<br/>';
         if (isset($_POST['valider'])) {
@@ -46,6 +68,7 @@ and open the template in the editor.
                 echo'<strong>Bonjour ' . $nom . '</strong> de la ville de ' . $ville . '  Bienvenu dans votre espace! <br/>';
             }
         }
+        
         $semaine = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche');
         //echo $semaine[3];
         foreach ($semaine as $jour){
@@ -126,7 +149,10 @@ and open the template in the editor.
        //recuperer et affecter la valeur de l'index
        //puis recuperer et affecter la valeur associé a cet index !!!
        foreach ($_POST as $index=>$valeur){
+           if ($index!='valider'){      
            echo '- '.$valeur.'<br>';
+           
+           }
        }
        
        //les fonctions dans la page
@@ -183,7 +209,7 @@ and open the template in the editor.
             //recup la valeur entrée
             $nombre=$_POST['num'];
             
-            //affectation de la verif dans une variable
+            //affectation de la verif dans la variable "recup"
             $recup= Functions::parite($nombre);
             
             //afficher le verdict
