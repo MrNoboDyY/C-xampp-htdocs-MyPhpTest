@@ -19,17 +19,17 @@ and open the template in the editor.
             'cache' => false,
         ));
         
-        //charger le template
+        //charger le template premiereTwig
         $template = $twig->load('premiereTwig.twig');
         
-        //affectation de données aux diff variables
-        echo $template->render(array('salaire' => '2000',
-            'branche'=> 'informatique',
-            'moyenne'=> 11.5,
-            'nom'=>'jean',
-            'age'=>19,
-            'taille'=>2.10,
-            'moteur_name'=>'Twig'));
+       // affectation de données aux diff variables
+//        echo $template->render(array('salaire' => '2000',
+//            'branche'=> 'informatique',
+//            'moyenne'=> 11.5,
+//            'nom'=>'jean',
+//            'age'=>19,
+//            'taille'=>2.10,
+//            'moteur_name'=>'Twig'));
 
 
         $salaire = 2000;

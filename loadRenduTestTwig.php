@@ -17,17 +17,20 @@ and open the template in the editor.
         $twig = new Twig_Environment($loader, array(
             'cache' => false,
         ));
+
         $template = $twig->load('renduTestTwig.twig');
-        
-        $data=array('fruits'=>array(
-            array('name'=>'Papaye','couleur'=>'yellow'
+
+        $data = array('fruits' => array(
+                array('name' => 'Papaye', 'couleur' => 'yellow'
                 ),
-            array('name'=>'Orange','couleur'=>'orange'
+                array('name' => 'Orange', 'couleur' => 'orange'
                 ),
-            array('name'=>'Fraise','couleur'=>'red'
+                array('name' => 'Fraise', 'couleur' => 'red'
                 )
         ));
         echo $template->render($data);
         ?>
+
+        
     </body>
 </html>

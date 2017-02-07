@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        
     </head>
     <body>
         <h1>Bienvenu dans votre espace</h1>
@@ -44,6 +45,20 @@ and open the template in the editor.
         //appel du fichier premiereTwig dans templates
         //possibilité d'en creer plusieurs...
         $template = $twig->load('premiereTwig.twig');
+        $template = $twig->load('renduTestTwig.twig');
+        
+        //tableau de fruits avec renduTestTwig
+        $data = array('fruits' => array(
+                array('name' => 'Papaye', 'couleur' => 'yellow'
+                ),
+                array('name' => 'Orange', 'couleur' => 'orange'
+                ),
+                array('name' => 'Fraise', 'couleur' => 'red'
+                )
+        ));
+        echo $template->render($data);
+        
+        
         
         //affichage du fichier premiereTwig
         //voir config dans premiereTwig
@@ -53,7 +68,11 @@ and open the template in the editor.
             'nom'=>'jean',
             'age'=>19,
             'taille'=>2.10,
-            'moteur_name'=>'Twig'));
+            'moteur_name'=>'Twig',
+            'fruit_name'=>'Mangue',
+            'fruit_name2'=>'Orange',
+            'fruit_name3'=>'Raisin')).'<br>';
+       
         
   /////////////////////////////////////////////////////////      
 ////////-->> Fin de Twig <<--////////////////////////////////////   
@@ -227,9 +246,6 @@ and open the template in the editor.
 //        for($i=0;$i<=50;$i++){
 //            echo 'je ne tricherai plus.' , $i .'<br/>';
 //        }
-        
-        
-        
         
         
         ?>
