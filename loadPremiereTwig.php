@@ -23,31 +23,31 @@ and open the template in the editor.
         $template = $twig->load('premiereTwig.twig');
         
        // affectation de données aux diff variables
-//        echo $template->render(array('salaire' => '2000',
-//            'branche'=> 'informatique',
-//            'moyenne'=> 11.5,
-//            'nom'=>'jean',
-//            'age'=>19,
-//            'taille'=>2.10,
-//            'moteur_name'=>'Twig'));
+        echo $template->render(array('salaire' => '2000',
+            'branche'=> 'informatique',
+            'moyenne'=> 11.5,
+            'nom'=>'jean',
+            'age'=>19,
+            'taille'=>2.10,
+            'moteur_name'=>'Twig'));
 
 
-        $salaire = 2000;
-        $branche = 'informatique';
-        $moyenne = 11.5;
-        $nom = 'jean';
-        $age = 19;
-        $taille = 2.10;
-        $moteur_name = 'Twig';
-        echo '<strong>Bonjour.</br></strong>
-        Le salaire auquel j\'aspire pour bien vivre ' . $salaire . '€.<br/>
-                La branche dans laquelle je travaille ou souhaite travailler : l\' ' . $branche . '</br>
-                  Pour préciser:<strong>l\'informatique est la branche dans laquelle je travaille.</br></strong>  
-                  La note moyenne que j\'ai obetenue au BAC :' . $moyenne . '</br>    
-            Mon 2ieme nom est ' . $nom . '<br/>
-                j\'ai ' . $age . '<br/>
-                    je mesure ' . $taille . 'm.<br/>
-                        et comme mon nom l\'indique,je suis petit'
+//        $salaire = 2000;
+//        $branche = 'informatique';
+//        $moyenne = 11.5;
+//        $nom = 'jean';
+//        $age = 19;
+//        $taille = 2.10;
+//        $moteur_name = 'Twig';
+//        echo '<strong>Bonjour.</br></strong>
+//        Le salaire auquel j\'aspire pour bien vivre ' . $salaire . '€.<br/>
+//                La branche dans laquelle je travaille ou souhaite travailler : l\' ' . $branche . '</br>
+//                  Pour préciser:<strong>l\'informatique est la branche dans laquelle je travaille.</br></strong>  
+//                  La note moyenne que j\'ai obetenue au BAC :' . $moyenne . '</br>    
+//            Mon 2ieme nom est ' . $nom . '<br/>
+//                j\'ai ' . $age . '<br/>
+//                    je mesure ' . $taille . 'm.<br/>
+//                        et comme mon nom l\'indique,je suis petit'
         ?>
         <br>
 

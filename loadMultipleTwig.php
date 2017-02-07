@@ -45,7 +45,7 @@ and open the template in the editor.
         //appel du fichier premiereTwig dans templates
         //possibilité d'en creer plusieurs...
         $template = $twig->load('premiereTwig.twig');
-        $template = $twig->load('renduTestTwig.twig');
+        $template1 = $twig->load('renduTestTwig.twig');
         
         //tableau de fruits avec renduTestTwig
         $data = array('fruits' => array(
@@ -56,13 +56,8 @@ and open the template in the editor.
                 array('name' => 'Fraise', 'couleur' => 'red'
                 )
         ));
-        echo $template->render($data);
         
-        
-        
-        //affichage du fichier premiereTwig
-        //voir config dans premiereTwig
-        echo $template->render(array('salaire' => '2000',
+        $comment = array('salaire' => '2000',
             'branche'=> 'informatique',
             'moyenne'=> 11.5,
             'nom'=>'jean',
@@ -70,8 +65,25 @@ and open the template in the editor.
             'taille'=>2.10,
             'moteur_name'=>'Twig',
             'fruit_name'=>'Mangue',
-            'fruit_name2'=>'Orange',
-            'fruit_name3'=>'Raisin')).'<br>';
+            'fruit_name2'=>'Orange');
+        
+        echo $template->render($comment);
+        echo $template1->render($data);
+        
+        
+        
+        //affichage du fichier premiereTwig
+        //voir config dans premiereTwig
+//        echo $template->render(array('salaire' => '2000',
+//            'branche'=> 'informatique',
+//            'moyenne'=> 11.5,
+//            'nom'=>'jean',
+//            'age'=>19,
+//            'taille'=>2.10,
+//            'moteur_name'=>'Twig',
+//            'fruit_name'=>'Mangue',
+//            'fruit_name2'=>'Orange',
+//            'fruit_name3'=>'Raisin')).'<br>';
        
         
   /////////////////////////////////////////////////////////      
