@@ -8,14 +8,15 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>En-tête de Page Web</title>
-
     </head>
     <body>
+        <div style="background-color: background">                  
+            <marquee behavior="alternate" direction="right">
+                <p style="font-family: courier">je viens de l'include de headerDePage<br>                   
+                <img  style="width:100px;height:30px" src="pictureS/2ieme_GIF.gif" alt="" />                                        
+                </p>
+            </marquee>
+        </div>
 
-    <marquee behavior="alternate" direction="right">        
-        <img src="pictureS/pngmashroomResized.jpg"/>
-    </marquee>
-
-    </script>
-</body>
+    </body>
 </html>

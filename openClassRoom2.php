@@ -20,7 +20,7 @@ and open the template in the editor.
 
         <!--        le corps de la Page      -->
 
-        <div><h1 >
+        <div><h1 style="font-family:verdana;" >
             Ceci est le corps de la page, les includes nous permettent de simplifier le code !!
             En en-tête et en pied de page !!!
         </h1></div>

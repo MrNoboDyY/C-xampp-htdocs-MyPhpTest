@@ -10,6 +10,8 @@ and open the template in the editor.
         <title>Menu de la page Web</title>
     </head>
     <body>
-        
+        <h1><p id="parag" style="color: blueviolet">            
+                Cette partie provient de la l'include de menuDePage !!!
+            </p></h1>
     </body>
 </html>

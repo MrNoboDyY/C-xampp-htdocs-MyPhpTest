@@ -10,8 +10,10 @@ and open the template in the editor.
         <title>Pied de la Page Web</title>
     </head>
     <body>
+        <div style="background-color: gray">
         <h1>
             <marquee behavior="alternate">cette partie vient de l'include du footerDePage</marquee> 
-        </h1>
+        </h1>            
+        </div>
     </body>
 </html>
